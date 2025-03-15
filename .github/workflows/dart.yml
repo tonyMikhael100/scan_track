@@ -20,15 +20,8 @@ jobs:
       - name: Get Dependencies
         run: flutter pub get
 
-      - name: Clean Project
-        run: flutter clean
-
-      - name: Ensure Podfile Exists
-        run: |
-          cd ios
-          if [ ! -f Podfile ]; then
-            flutter build ios --no-codesign
-          fi
+      - name: Generate iOS Files (Fix Podfile Error)
+        run: flutter build ios --no-codesign
 
       - name: Update Pod Repository
         run: pod repo update
