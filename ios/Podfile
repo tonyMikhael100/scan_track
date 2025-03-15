@@ -4,8 +4,6 @@ platform :ios, '15.5'
 use_frameworks!
 use_modular_headers!
 
-require File.expand_path('../flutter_export_environment.sh', __FILE__)
-
 flutter_root = File.expand_path('..', File.dirname(__FILE__))
 load File.join(flutter_root, 'flutter', 'tools', 'podhelper.rb')
 
