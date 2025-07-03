@@ -27,10 +27,10 @@ jobs:
       - name: 📦 Get Flutter packages
         run: flutter pub get
 
-      - name: ⚙️ Set iOS Deployment Target to 13.0
+      - name: ⚙️ Set iOS Deployment Target to 14.0
         run: |
-          sed -i '' "s/platform :ios, .*/platform :ios, '13.0'/" ios/Podfile
-          sed -i '' "s/IPHONEOS_DEPLOYMENT_TARGET = .*/IPHONEOS_DEPLOYMENT_TARGET = 13.0;/g" ios/Runner.xcodeproj/project.pbxproj
+          sed -i '' "s/platform :ios, .*/platform :ios, '14.0'/" ios/Podfile
+          find ios -name project.pbxproj -print0 | xargs -0 sed -i '' "s/IPHONEOS_DEPLOYMENT_TARGET = [0-9.]*/IPHONEOS_DEPLOYMENT_TARGET = 14.0/g"
 
       - name: 📚 Install CocoaPods
         run: |
