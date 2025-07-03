@@ -12,10 +12,10 @@ jobs:
       - name: 📥 Checkout source
         uses: actions/checkout@v3
 
-      - name: 💡 Set up Flutter (v3.22.0 with Dart ≥ 3.3)
+      - name: 💡 Set up Flutter (v3.32.5)
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.0'
+          flutter-version: '3.32.5'
           channel: stable
           architecture: x64
 
